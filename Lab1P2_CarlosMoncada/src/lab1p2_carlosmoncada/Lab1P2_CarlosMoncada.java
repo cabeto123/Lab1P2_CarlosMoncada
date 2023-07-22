@@ -37,6 +37,7 @@ public class Lab1P2_CarlosMoncada {
                     double suma = suma(vertice + 200, a, b, c, 0);
                     System.out.println("Suma " + suma);
                     double resta = resta(vertice-200, a, b, c, 0);
+                    System.out.println("Resta "+resta);
 
                     break;
                 case 2:
@@ -168,7 +169,7 @@ public class Lab1P2_CarlosMoncada {
         if (i == 100) {
             return valorant;
         } else {
-            valorant = valorant+(a * (Math.pow(valorant, 2)) + valorant + c) / (2 * a * valorant + 1);
+            valorant = valorant+(a * (Math.pow(valorant, 2)) + valorant + c) / (2 * a * valorant + b);
             return suma(valorant, a, b, c, i + 1);
         }
 
@@ -177,8 +178,8 @@ public class Lab1P2_CarlosMoncada {
         if (i == 100) {
             return valorant;
         } else {
-            valorant = valorant-(a * (Math.pow(valorant, 2)) + valorant + c) / (2 * a * valorant + 1);
-            return suma(valorant, a, b, c, i + 1);
+            valorant = valorant-(a * (Math.pow(valorant, 2)) + valorant + c) / (2 * a * valorant + b);
+            return resta(valorant, a, b, c, i + 1);
         }
 
     }
